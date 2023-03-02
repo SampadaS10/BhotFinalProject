@@ -45,15 +45,18 @@ public class CategoryController
 	public ResponseEntity<?> insert(@ModelAttribute Category newcategory)
 	{
 		URI view_cat=null;
-		try {
+		try 
+		{
 			view_cat = new URI("http://localhost:8070/view_category");
-		} catch (URISyntaxException e) {
+		} 
+		catch (URISyntaxException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		HttpHeaders httpHeader = new HttpHeaders();
 		httpHeader.setLocation(view_cat);
-		//Category category_inserted=catrepo.save(newcategory);
+		
+		Category category_inserted=catrepo.save(newcategory);
 		//System.out.println(category_inserted);
 		return new ResponseEntity<>(httpHeader,HttpStatus.SEE_OTHER);
 	}
@@ -71,7 +74,8 @@ public class CategoryController
 //		 model.addAttribute("allCategories", iterator);
 		
 		
-		 List<Category> categories=catrepo.findAll(); model.addAttribute("categories",categories);
+		 List<Category> categories=catrepo.findAll(); 
+		 model.addAttribute("categories",categories);
 		
 		//itr.forEach(t -> {System.out.println(t);});
 		return "admin/view_category";

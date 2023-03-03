@@ -12,8 +12,8 @@ public class Category {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int cat_id;
-	private String name;
+	private int category_id;
+	private String category_name;
 	private Date created_on;
 	private Date modified_on;
 
@@ -21,28 +21,20 @@ public class Category {
 		super();
 	}
 
-	public Category(int cat_id, String name, Date created_on, Date modified_on) {
-		super();
-		this.cat_id = cat_id;
-		this.name = name;
-		this.created_on = created_on;
-		this.modified_on = modified_on;
+	public int getCategory_id() {
+		return category_id;
 	}
 
-	public int getCat_id() {
-		return cat_id;
+	public void setCategory_id(int category_id) {
+		this.category_id = category_id;
 	}
 
-	public void setCat_id(int cat_id) {
-		this.cat_id = cat_id;
+	public String getCategory_name() {
+		return category_name;
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
+	public void setCategory_name(String category_name) {
+		this.category_name = category_name;
 	}
 
 	public Date getCreated_on() {
@@ -63,9 +55,16 @@ public class Category {
 
 	@Override
 	public String toString() {
-		return "Category [cat_id=" + cat_id + ", name=" + name + ", created_on=" + created_on + ", modified_on="
-				+ modified_on + "]";
+		return "Category [category_id=" + category_id + ", category_name=" + category_name + ", created_on="
+				+ created_on + ", modified_on=" + modified_on + "]";
 	}
-	
+
+	public Category(int category_id, String category_name, Date created_on, Date modified_on) {
+		super();
+		this.category_id = category_id;
+		this.category_name = category_name;
+		this.created_on = created_on;
+		this.modified_on = modified_on;
+	}
 
 }

@@ -1205,10 +1205,10 @@ Settings</a>
           </a>
           <ul>
           <li class="">
-          <a href="products.html">Add Category</a>
+          <a href="add_category.html">Add Category</a>
           </li>
           <li class="">
-          <a href="product-details.html">View Category</a>
+          <a href="view_category.html">View Category</a>
           </li>
           </ul>
           </li>
@@ -1220,10 +1220,10 @@ Settings</a>
         </a>
         <ul>
         <li class="">
-        <a href="inbox.html">Add Product</a>
+        <a href="add_product.html">Add Product</a>
         </li>
         <li class="">
-        <a href="read-email.html">View Product</a>
+        <a href="view_product.html">View Product</a>
         </li>
         </ul>
         </li>
@@ -1309,6 +1309,13 @@ Export
 </div>
 </div>
 </td>
+<td>
+<div class="d-flex">
+<div class="userDatatable-inline-title">
+<img src="img/svg/x2.svg">
+</div>
+</div>
+</td>
 </tr>
 
 <tr th:each="product: ${products}">
@@ -1334,10 +1341,11 @@ Export
 </div>
 </div>
 </td>
+
 <td>
 <div class="d-flex">
-<div class="userDatatable-inline-title" th:text="${product.getProduct_quantity()}">
-</div>
+<!-- <img th:src="'img/'+${product.getProduct_image()}"> -->
+ <img th:src="@{${'/img/Jewellery/' + product.getProduct_image()}}" width="200"/> 
 </div>
 </td>
 </tr>

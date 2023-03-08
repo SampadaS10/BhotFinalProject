@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" dir="ltr">
 
-<!-- Mirrored from demo.dashboardmarket.com/hexadash-html/ltr/dynamic-table.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Feb 2023 15:22:23 GMT -->
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>HexaDash</title>
+<title>Divine Jewellery</title>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/plugin.min.css">
@@ -14,7 +14,7 @@
 
 <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
 
-<link rel="stylesheet" href="../../../unicons.iconscout.com/release/v4.0.0/css/line.css">
+<link rel="stylesheet" href="release/v4.0.0/css/line.css">
 </head>
 <body class="layout-light side-menu">
 <div class="mobile-search">
@@ -43,57 +43,16 @@
 <div class="hexadash-top-menu position-relative">
 <ul>
 <li class="has-subMenu">
-<a href="#" class="">Dashboard</a>
-<ul class="subMenu">
-<li class="">
-<a href="index.html">Demo 1</a>
-</li>
-<li class="">
-<a href="demo2.html">Demo 2</a>
-</li>
-<li class="">
-<a href="demo3.html">Demo 3</a>
-</li>
-<li class="">
-<a href="demo4.html">Demo 4</a>
-</li>
-<li class="">
-<a href="demo5.html">Demo 5</a>
-</li>
-<li class="">
-<a href="demo6.html">Demo 6</a>
-</li>
-<li class="">
-<a href="demo7.html">Demo 7</a>
-</li>
-<li class="">
-<a href="demo8.html">Demo 8</a>
-</li>
-<li class="">
-<a href="demo9.html">Demo 9</a>
-</li>
-<li class="">
-<a href="demo10.html">Demo 10</a>
-</li>
-</ul>
+<a href="#" class="active">Dashboard</a>
 </li>
 <li class="has-subMenu">
-<a href="#" class="">Layouts</a>
+<a href="#" class="">Category</a>
 <ul class="subMenu">
 <li class="l_sidebar">
-<a href="#" data-layout="light">Light Mode</a>
+<a href="#" data-layout="light">Add Category</a>
 </li>
 <li class="l_sidebar">
-<a href="#" data-layout="dark">Dark Mode</a>
-</li>
-<li class="l_navbar">
-<a href="#" data-layout="side">Side Menu</a>
-</li>
-<li class="layout">
-<a href="https://demo.dashboardmarket.com/hexadash-html/rtl">RTL</a>
-</li>
-<li class="layout">
-<a href="https://demo.dashboardmarket.com/hexadash-html/ltr">LTR</a>
+<a href="#" data-layout="dark">View Category</a>
 </li>
 </ul>
 </li>
@@ -101,8 +60,8 @@
 <a href="#" class="">Apps</a>
 <ul class="megaMenu-wrapper megaMenu-dropdown">
 <li>
-<ul>
- <li class="has-subMenu-left">
+ <ul>
+<li class="has-subMenu-left">
 <a href="#" class="">
 <img src="img/svg/mail.svg" alt="mail" class="svg nav-icon">
 <span class="menu-text">Email</span>
@@ -344,7 +303,7 @@ Ticket</a>
 </ul>
 </li>
 <li class="has-subMenu-left">
-<a href="#" class=" active">
+<a href="#" class="">
 <span class="nav-icon uil uil-table"></span>
 <span class="menu-text">Table</span>
 </a>
@@ -358,10 +317,10 @@ Table</a>
 Table</a>
 </li>
 <li>
-<a href="dynamic-table.html" class="active">
+<a href="dynamic-table.html" class="">
 Dynamic Table
- </a>
- </li>
+</a>
+  </li>
 </ul>
 </li>
 </ul>
@@ -1104,20 +1063,7 @@ dolor amet cosec Lorem ipsum</span>
 </div>
 </li>
 
-<li class="nav-flag-select">
-<div class="dropdown-custom">
-<a href="javascript:;" class="nav-item-toggle"><img src="img/flag.png" alt="" class="rounded-circle"></a>
-<div class="dropdown-parent-wrapper">
-<div class="dropdown-wrapper dropdown-wrapper--small">
-<a href="#"><img src="img/eng.png" alt=""> English</a>
-<a href="#"><img src="img/ger.png" alt=""> German</a>
-<a href="#"><img src="img/spa.png" alt=""> Spanish</a>
-<a href="#"><img src="img/tur.png" alt=""> Turkish</a>
-<a href="#"><img src="img/iraq.png" alt=""> Arabic</a>
-</div>
-</div>
-</div>
-</li>
+
 
 <li class="nav-author">
 <div class="dropdown-custom">
@@ -1182,191 +1128,112 @@ Settings</a>
 </nav>
 </header>
 <main class="main-content">
-    <div class="sidebar-wrapper">
-        <div class="sidebar sidebar-collapse" id="sidebar">
-        <div class="sidebar__menu-group">
-        <ul class="sidebar_nav">
-        <li class="has-child open">
-        <a href="#" class="active">
-        <span class="nav-icon uil uil-create-dashboard"></span>
-        <span class="menu-text">Dashboard</span>
-        
-        </a>
-        </li>
-        
-        <li class="menu-title mt-30">
-        <span>Options</span>
-        </li>
-        <li class="has-child">
-          <a href="#" class="">
-          <span class="nav-icon uil uil-bag"></span>
-          <span class="menu-text text-initial">Category</span>
-          <span class="toggle-icon"></span>
-          </a>
-          <ul>
-          <li class="">
-          <a href="add_category.html">Add Category</a>
-          </li>
-          <li class="">
-          <a href="view_category.html">View Category</a>
-          </li>
-          </ul>
-          </li>
-        <li class="has-child">
-        <a href="#" class="">
-        <span class="nav-icon uil uil-envelope"></span>
-        <span class="menu-text">Product</span>
-        <span class="toggle-icon"></span>
-        </a>
-        <ul>
-        <li class="">
-        <a href="add_product.html">Add Product</a>
-        </li>
-        <li class="">
-        <a href="view_product.html">View Product</a>
-        </li>
-        </ul>
-        </li>
-        
-        <li class="has-child">
-        <a href="#" class="">
-        <span class="nav-icon uil uil-folder"></span>
-        <span class="menu-text">Order History</span>
-        
-        </a>
-        
-        </li>
-        
-        
-        
-        
-        
-        
-        
-        </ul>
-        </div>
-        </div>
-        </div>
-<div class="contents">
-<div class="container-fluid">
-<div class="row">
-<div class="col-lg-12 mb-30">
-<div class="card mt-30">
-<div class="card-body">
-<div class="userDatatable adv-table-table global-shadow border-light-0 w-100 adv-table">
-<div class="table-responsive">
-<div class="adv-table-table__header">
-<h4>Data Table</h4>
-<div class="adv-table-table__button">
-<div class="dropdown">
-<a class="btn btn-primary dropdown-toggle dm-select" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-Export
+<div class="sidebar-wrapper">
+<div class="sidebar sidebar-collapse" id="sidebar">
+<div class="sidebar__menu-group">
+<ul class="sidebar_nav">
+<li class="has-child open">
+<a href="#" class="active">
+<span class="nav-icon uil uil-create-dashboard"></span>
+<span class="menu-text">Dashboard</span>
+
 </a>
-<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-<a class="dropdown-item" href="#">copy</a>
-<a class="dropdown-item" href="#">csv</a>
-<a class="dropdown-item" href="#">print</a>
-</div>
-</div>
-</div>
-</div>
-<div id="filter-form-container"></div>
-<table class="table mb-0 table-borderless adv-table" data-sorting="true" data-filter-container="#filter-form-container" data-paging-current="1" data-paging-position="right" data-paging-size="10">
-<thead>
-<tr class="userDatatable-header">
-<th>
-<span class="userDatatable-title">Product Id</span>
-</th>
-<th>
-<span class="userDatatable-title">Product Name</span>
-</th>
-<th>
-<span class="userDatatable-title">Price</span>
-</th>
-<th>
-<span class="userDatatable-title">Quantity</span>
-</th>
-<th>
-<span class="userDatatable-title">Product Image</span>
-</th>
-<th>
-<span class="userDatatable-title">Operations</span>
-</th>
-<th>
-<span class="userDatatable-title"></span>
-</th>
-</tr>
-</thead>
- <tbody>
-<tr>
-<td>
-<div class="userDatatable-content">01</div>
-</td>
-<td>
-<div class="d-flex">
-<div class="userDatatable-inline-title">
-<h6>Gold</h6>
-</div>
-</div>
-</td>
-<td>
-<div class="d-flex">
-<div class="userDatatable-inline-title">
-<img src="img/svg/x2.svg">
-</div>
-</div>
-</td>
-</tr>
+</li>
 
-<tr th:each="product: ${products}">
-<td>
-<div class="userDatatable-content" th:text="${product.getProduct_id()}"></div>
-</td>
-<td>
-<div class="d-flex">
-<div class="userDatatable-inline-title">
-<h6 th:text="${product.getProduct_name()}"></h6>
-</div>
-</div>
-</td>
-<td>
-<div class="d-flex">
-<div class="userDatatable-inline-title" th:text="${product.getPrice()}">
-</div>
-</div>
-</td>
-<td>
-<div class="d-flex">
-<div class="userDatatable-inline-title" th:text="${product.getProduct_quantity()}">
-</div>
-</div>
-</td>
+<li class="menu-title mt-30">
+<span>Options</span>
+</li>
+<li class="has-child">
+  <a href="#" class="">
+  <span class="nav-icon uil uil-bag"></span>
+  <span class="menu-text text-initial">Category</span>
+  <span class="toggle-icon"></span>
+  </a>
+  <ul>
+  <li class="">
+  <a href="products.html">Add Category</a>
+  </li>
+  <li class="">
+  <a href="product-details.html">View Category</a>
+  </li>
+  </ul>
+  </li>
+<li class="has-child">
+<a href="#" class="">
+<span class="nav-icon uil uil-envelope"></span>
+<span class="menu-text">Product</span>
+<span class="toggle-icon"></span>
+</a>
+<ul>
+<li class="">
+<a href="inbox.html">Add Product</a>
+</li>
+<li class="">
+<a href="read-email.html">View Product</a>
+</li>
+</ul>
+</li>
 
-<td>
-<div class="d-flex">
-<!-- <img th:src="'img/'+${product.getProduct_image()}"> -->
- <img th:src="@{${'/img/Jewellery/' + product.getProduct_image()}}" width="150" height="150"/> 
-</div>
-</td>
+<li class="has-child">
+<a href="#" class="">
+<span class="nav-icon uil uil-folder"></span>
+<span class="menu-text">Order History</span>
 
-<td>
-<button class="btn btn-primary btn-default btn-rounded ">
-<span class="nav-icon uil uil-edit"></span> Update</button>
+</a>
 
-<a th:href="@{'/deleteproduct'+${product.getProduct_id()}}">
-<button type="submit" class="btn btn-primary btn-default btn-rounded ">
-<span class="nav-icon uil uil-trash-alt"></span> Delete</button></a>
-</td>
+</li>
 
-</tr>
 
-</tbody>
-</table>
+
+
+
+
+
+</ul>
 </div>
 </div>
 </div>
+<div class="contents">
+<div class="crm mb-25">
+<div class="container-fluid">
+<div class="row ">
+
+<div class="col-xxl-6">
+<div class="row">
+<br>
+    <div class="col-lg-8">
+        <div class="card card-horizontal card-default card-md mb-4">
+        <div class="card-header">
+        <h6>Add Category</h6>
+        </div>
+        <div class="card-body py-md-30">
+        <div class="horizontal-form">
+        <form action="addcategory" method="post">
+        <div class="form-group row">
+        <div class="col-sm-3 d-flex aling-items-center">
+        <label for="inputName" class=" col-form-label color-dark fs-14 fw-500 align-center">Category Name</label>
+        </div>
+        <div class="col-sm-9">
+        <input type="text" class="form-control ih-medium ip-light radius-xs b-light px-15" id="inputName" placeholder="Enter Category Name" name="category_name">
+        </div>
+        </div>
+        <center><button class="btn btn-primary btn-default btn-squared ">Add Category
+        </button></center>
+
+        </form>
+        </div>
+        <label for="inputName" class=" col-form-label color-dark fs-14 fw-500 align-center">Category Already Exits!!!</label>
+        </div>
+        </div>
+        
+        </div>
+
 </div>
 </div>
+
+
+</div>
+
 </div>
 </div>
 </div>
@@ -1376,26 +1243,11 @@ Export
 <div class="row">
 <div class="col-md-6">
 <div class="footer-copyright">
-<p><span>© 2023</span><a href="#">Sovware</a>
+<p><span>© 2023</span><a href="#">Divine Jewellery</a>
 </p>
 </div>
 </div>
-<div class="col-md-6">
-<div class="footer-menu text-end">
-<ul>
-<li>
-<a href="#">About</a>
-</li>
-<li>
-<a href="#">Team</a>
-</li>
-<li>
-<a href="#">Contact</a>
-</li>
-</ul>
-</div>
 
-</div>
 </div>
 </div>
 </div>
@@ -1427,7 +1279,7 @@ Export
 <h4>Layout Type</h4>
 <ul class="customizer-list d-flex layout">
 <li class="customizer-list__item">
- <a href="https://demo.dashboardmarket.com/hexadash-html/ltr" class="active">
+<a href="https://demo.dashboardmarket.com/hexadash-html/ltr" class="active">
 <img src="img/ltr.png" alt="">
 <i class="fa fa-check-circle"></i>
 </a>
@@ -1481,12 +1333,12 @@ Export
 </div>
 </div>
 </div>
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgYKHZB_QKKLWfIRaYPCadza3nhTAbv7c"></script>
+
 
 <script src="js/plugins.min.js"></script>
 <script src="js/script.min.js"></script>
 
 </body>
 
-<!-- Mirrored from demo.dashboardmarket.com/hexadash-html/ltr/dynamic-table.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Feb 2023 15:22:23 GMT -->
+
 </html>

@@ -62,7 +62,7 @@ public class ProductController
 	{
 		List<Product> products=prodrepo.findAll(); 
 		 model.addAttribute("products",products);
-		return "admin/view_product";
+		return "vendor/view_product";
 	}
 	
 	@GetMapping("/index")
@@ -70,7 +70,7 @@ public class ProductController
 	{
 		List<Product> lst=prodrepo.FindCategory();
 		m.addAttribute("list",lst);
-		return "admin/index";
+		return "vendor/index";
 	}
 	
 	@GetMapping("/deleteproduct{id}")

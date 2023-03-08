@@ -1,16 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base::layout(~{::section})}">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
 
-	<h1>Welcome Form</h1>
-	<form action="register" method="post">
-	Your ID: <input type="number" name="id"/>
-	Your Name: <input type="text" name="name"/>
-	<input type="submit" value="Add"/>
-</form>
+	<section>
+		<div class="card-body">
+			<div
+				class="userDatatable adv-table-table global-shadow border-light-0 w-100 adv-table">
+				<div class="table-responsive">
+					<div class="adv-table-table__header">
+						<h4>View Category</h4>
+						<div class="adv-table-table__button"></div>
+					</div>
+					<div id="filter-form-container"
+						class="footable-filtering-external footable-filtering-right">
+						<form class="form-inline">
+
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a class="checkbox"><label><input
+											type="checkbox" checked="checked"><span
+											class="userDatatable-title">id</span></label></a></li>
+								<li><a class="checkbox"><label><input
+											type="checkbox" checked="checked"><span
+											class="userDatatable-title">Category Name</span></label></a></li>
+								<li><a class="checkbox"><label><input
+											type="checkbox" checked="checked"><span
+											class="userDatatable-title">Operations</span> </label></a></li>
+							</ul>
+							</form>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="container-fluid">
+			<div class="card-body">
+				<div
+					class="userDatatable adv-table-table global-shadow border-light-0 w-100 adv-table">
+
+
+					<h1>Welcome Form</h1>
+					<form action="register" method="post">
+						Your ID: <input type="number" name="id" /> Your Name: <input
+							type="text" name="name" /> <input type="submit" value="Add" />
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
 </body>
 </html>

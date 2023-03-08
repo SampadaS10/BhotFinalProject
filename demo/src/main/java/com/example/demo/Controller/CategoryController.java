@@ -23,7 +23,7 @@ public class CategoryController
 	
 	@GetMapping("/addcategory")
 	public String index() {
-		return "admin/add_category";
+		return "vendor/add_category";
 	}
 	
 		
@@ -72,7 +72,7 @@ public class CategoryController
 		
 		 List<Category> categories=catrepo.findAll(); 
 		 model.addAttribute("categories",categories);
-		return "admin/view_category";
+		return "vendor/view_category";
 	}
 	
 	@GetMapping("/deletecategory{id}")

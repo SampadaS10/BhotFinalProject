@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.Entity.TestEntity;
+import com.example.demo.Service.EmailService;
 import com.example.demo.repo.TestRepo;
 
 import org.springframework.ui.Model;
@@ -18,12 +19,14 @@ public class ControllerEg
 {
 	@Autowired
 	private TestRepo repo;
+	@Autowired
+	private EmailService service;
 	
 	@GetMapping("/")
 	public String index(Model model) {
 		System.out.println("User Connected");
 		model.addAttribute("index", new TestEntity());
-		return "index";
+		return "MailCheck";
 	}
 	//@ResponseBody
 	@PostMapping("/register")
@@ -41,5 +44,13 @@ public class ControllerEg
 		repo.deleteById(id);
 		return "index";
 	}
+	
+	@GetMapping("/sendMail/?email={email}")
+	public String sendMail(@RequestParam("email")String email) {
+		System.out.println(email);
+		service.sendEmail(email);
+		return "redirect:/MailCheck";
+	}
+	
 
 }

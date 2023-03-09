@@ -26,7 +26,7 @@ public class ControllerEg
 	public String index(Model model) {
 		System.out.println("User Connected");
 		model.addAttribute("index", new TestEntity());
-		return "MailCheck";
+		return "index";
 	}
 	//@ResponseBody
 	@PostMapping("/register")

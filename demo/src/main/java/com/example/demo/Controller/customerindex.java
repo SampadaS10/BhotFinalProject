@@ -31,4 +31,15 @@ public class customerindex
 		//itr.forEach(t -> {System.out.println(t);});
 		return "customer/index";
 	}
+	@GetMapping("/all-products")
+	public String viewAllProducts(Model model)
+	{
+
+		 List<Product> products=productrepo.findAll(); 
+		 model.addAttribute("products",products);
+		 
+		//itr.forEach(t -> {System.out.println(t);});
+		return "customer/all-products";
+	}
+	
 }

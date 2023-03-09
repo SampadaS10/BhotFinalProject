@@ -65,12 +65,16 @@ public class ProductController
 		return "vendor/view_product";
 	}
 	
-	@GetMapping("/index")
+	@GetMapping("/adminindex")
 	public String index(Model m)
 	{
-		List<Product> lst=prodrepo.FindCategory();
-		m.addAttribute("list",lst);
-		return "vendor/index";
+		List<Product> lstp=prodrepo.FindProducts();
+		int cntp=lstp.size();
+		m.addAttribute("productcount",cntp);
+		List<Category> lstc=catrepo.FindCategory();
+		int cntc=lstc.size();
+		m.addAttribute("categorycount",cntc);
+		return "admin/index";
 	}
 	
 	@GetMapping("/deleteproduct{id}")

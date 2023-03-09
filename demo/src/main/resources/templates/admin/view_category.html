@@ -114,10 +114,10 @@ Settings</a>
   </a>
   <ul>
   <li class="">
-  <a href="products.html">Add Category</a>
+  <a href="addcategory">Add Category</a>
   </li>
   <li class="">
-  <a href="product-details.html">View Category</a>
+  <a href="view_category">View Category</a>
   </li>
   </ul>
   </li>
@@ -129,16 +129,16 @@ Settings</a>
 </a>
 <ul>
 <li class="">
-<a href="inbox.html">Add Product</a>
+<a href="addproduct">Add Product</a>
 </li>
 <li class="">
-<a href="read-email.html">View Product</a>
+<a href="view_product">View Product</a>
 </li>
 </ul>
 </li>
 
 <li class="has-child">
-<a href="#" class="">
+<a href="orderhistory" class="">
 <span class="nav-icon uil uil-folder"></span>
 <span class="menu-text">Order History</span>
 
@@ -202,7 +202,7 @@ Settings</a>
 
 											</thead>
 											<tbody>
-												<tr>
+												<!-- <tr>
 													<td>
 														<div class="userDatatable-content">01</div>
 													</td>
@@ -226,7 +226,7 @@ Settings</a>
 														</button>
 													</td>
 
-												</tr>
+												</tr> -->
 												<tr th:each="category: ${categories}">
 													<td th:text="${category.getCategory_id()}"></td>
 													<td th:text="${category.getCategory_name()}"></td>

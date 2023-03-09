@@ -43,5 +43,12 @@ public class ControllerEg
 		repo.deleteById(123);
 		return "index";
 	}
+	
+	@GetMapping("/payment")
+	public String payment(Model model) {
+		System.out.println("User Connected");
+		model.addAttribute("index", new TestEntity());
+		return "customer/payment";
+	}
 
 }

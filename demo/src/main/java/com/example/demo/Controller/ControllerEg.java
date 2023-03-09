@@ -45,6 +45,14 @@ public class ControllerEg
 		return "index";
 	}
 	
+<<<<<<< HEAD
+	@GetMapping("/payment")
+	public String payment(Model model) {
+		System.out.println("User Connected");
+		model.addAttribute("index", new TestEntity());
+		return "customer/payment";
+	}
+=======
 	@GetMapping("/sendMail/?email={email}")
 	public String sendMail(@RequestParam("email")String email) {
 		System.out.println(email);
@@ -52,5 +60,6 @@ public class ControllerEg
 		return "redirect:/MailCheck";
 	}
 	
+>>>>>>> branch 'master' of https://github.com/SampadaS10/Final_Project
 
 }

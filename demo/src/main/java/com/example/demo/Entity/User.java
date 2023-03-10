@@ -1,8 +1,5 @@
 package com.example.demo.Entity;
 
-import java.util.Objects;
-
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,12 +14,19 @@ public class User {
 
 	private String name;
 	private String address;
-	private int contact_no;
+	private long contact_no;
 	private String password;
+	private String email;
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	public User() {
 		super();
 	}
-	public User(int id, String name, String address, int contact_no, String password) {
+	public User(int id, String name, String address, long contact_no, String password) {
 		super();
 		this.user_id = id;
 		this.name = name;
@@ -48,10 +52,10 @@ public class User {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public int getContact_no() {
+	public long getContact_no() {
 		return contact_no;
 	}
-	public void setContact_no(int contact_no) {
+	public void setContact_no(long contact_no) {
 		this.contact_no = contact_no;
 	}
 	public String getPassword() {

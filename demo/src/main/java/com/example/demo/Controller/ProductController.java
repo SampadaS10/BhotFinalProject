@@ -12,10 +12,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.Entity.Category;
 import com.example.demo.Entity.Product;
+import com.example.demo.repo.CategoryRepo;
 import com.example.demo.repo.ProductRepo;
 
 
@@ -26,9 +28,14 @@ public class ProductController
 	@Autowired
 	private ProductRepo prodrepo;
 
+	@Autowired
+	private CategoryRepo catrepo;
+	
 	@GetMapping("/addproduct")
-	public String index() 
+	public String addproduct(Model model) 
 	{
+		 List<Category> categories=catrepo.findAll(); 
+		 model.addAttribute("categories",categories);
 		return "admin/add_product";
 	}
 	
@@ -55,6 +62,25 @@ public class ProductController
 	{
 		List<Product> products=prodrepo.findAll(); 
 		 model.addAttribute("products",products);
-		return "admin/view_product";
+		return "vendor/view_product";
+	}
+	
+	@GetMapping("/adminindex")
+	public String index(Model m)
+	{
+		List<Product> lstp=prodrepo.FindProducts();
+		int cntp=lstp.size();
+		m.addAttribute("productcount",cntp);
+		List<Category> lstc=catrepo.FindCategory();
+		int cntc=lstc.size();
+		m.addAttribute("categorycount",cntc);
+		return "admin/index";
+	}
+	
+	@GetMapping("/deleteproduct{id}")
+	public String DeleteCategoryget(@PathVariable int id)
+	{
+		prodrepo.deleteById(id);
+		return "redirect:/view_product";
 	}
 }

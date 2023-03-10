@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{customer/base::layout(~{::div})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	
+
+		
+			
+			
+				
+				<div th:each="product: ${products}" class="modal-dialog modal-lg" >
+                        <div class="Quick-view-popup modal-content text-left">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="col-md-12 col-xs-12 popap-open-box">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row">
+                                            <div class="col-xs-12 marB30">
+                                                <figure>
+                                                    <img src="img1/all/product-detail.png" alt="">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12 responsive-top">
+                                        <h3 class="theme-headdings text-left pad-top10 product-detail-title"><a href="#"><label th:text="${product.getProduct_name()}"></label></a></h3>
+                                        <div class="star-box-section left product-det text-left pad-top15">
+                                            <!-- <ul>
+                                                <li>
+                                                    <p>	<i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="star-code fa fa-star-half-o" aria-hidden="true"></i>
+                                                    </p>
+                                                </li>
+                                                <li class="border-left-site">3 Review(s)</li>
+                                                <li class="border-left-site">Add a Review</li>
+                                            </ul> -->
+                                        </div>
+                                        <div class="clear"></div>
+                                        <div class="per-box texy-left mar-top15">
+                                            <p th:text="${product.getProduct_description()}"></p>
+                                        </div>
+                                        <!-- <div class="product-detail-btn  pad-top15">
+                                            <div class="form-row col-sm-5 col-xs-12 country-boxs billing-box select ">
+                                                <div class="row">
+                                                    <p>
+                                                        <label for="billing_state">Material</label>
+                                                        <select class="billing_state2" id="billing_state" name="billing_state">
+                                                            <option value="">Select Color</option>
+                                                            <option value="AP">Red</option>
+                                                            <option value="AR">Blue</option>
+                                                            <option value="AS">Green</option>
+                                                            <option value="BR">Yellow</option>
+                                                            <option value="CT">Black</option>
+                                                        </select>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="form-row col-sm-5 country-boxs billing-box select down ">
+                                                <div class="row ">
+                                                    <p>
+                                                        <label for="billing_state">Size</label>
+                                                        <select class="billing_state" id="billing_state1" name="billing_state">
+                                                            <option value="">Select Size</option>
+                                                            <option value="AP">S</option>
+                                                            <option value="AR">L</option>
+                                                            <option value="AS">M</option>
+                                                            <option value="BR">XL</option>
+                                                            <option value="CT">XXL</option>
+                                                        </select>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                        <div class="col-md-6 col-sm-7 row">
+                                            <div class="order-data box order-table text-center padTB15">
+                                                <div class="order-table-cell order-text product-input-type">
+                                                    <input type="number" value="01" class="qty" name="qty1">													
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 col-sm-7 product-box-btm-blog row">
+                                            <a href="#" class="itg-button mar-top15">Add To Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			
+		
+	
+
+
+</body>
+</html>

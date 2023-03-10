@@ -11,4 +11,5 @@ public interface ProductRepo extends JpaRepository<Product, Integer>
 {
 	@Query("select p from Product p")
 	List<Product> FindProducts();
+	Product findById(int id);
 }

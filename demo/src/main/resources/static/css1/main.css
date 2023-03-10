@@ -1,0 +1,24 @@
+
+/*-----------------------------------------------------------------
+[All Css Import]
+-------------------------------------------------------------------*/
+
+/*---bootstap.CSS inluad---*/
+@import url("bootstrap.min.css");
+/*---font-awesome css inluad---*/
+@import url("plugin1/font-awesome/css/font-awesome.min.css");
+/*---megamenu css inluad---*/
+@import url("plugin1/menu-menu/css/hover-dropdown-menu.css");
+/*---slider css inluad---*/
+@import url("plugin1/owl-carousel-slider/css/owl.carousel.css");
+@import url("plugin1/owl-carousel-slider/css/owl.theme.default.css");
+/*---fancyBox.css inluad---*/
+@import url("plugin1/fancyBox/css/jquery.fancybox.css");
+/*---acordian.css inluad---*/
+@import url("plugin1/acordian/css/jquery-ui.css");
+/*---vertical.css inluad---*/
+@import url("plugin1/vertical-slider/css/jquery.bxslider.css");
+/*---animation.css inluad---*/
+@import url("style.css");
+/*---sresponsive.css inluad---*/
+@import url("responsive.css");

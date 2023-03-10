@@ -110,47 +110,7 @@ Settings</a>
   <span class="toggle-icon"></span>
   </a>
   <ul>
-<<<<<<< HEAD
-  <li class="">
-  <a href="products.html">Add Category</a>
-  </li>
-  <li class="">
-  <a href="product-details.html">View Category</a>
-  </li>
-  </ul>
-  </li>
-<li class="has-child">
-<a href="#" class="">
-<span class="nav-icon uil uil-envelope"></span>
-<span class="menu-text">Product</span>
-<span class="toggle-icon"></span>
-</a>
-<ul>
-<li class="">
-<a href="inbox.html">Add Product</a>
-</li>
-<li class="">
-<a href="read-email.html">View Product</a>
-</li>
-</ul>
-</li>
 
-<li class="has-child">
-<a href="#" class="">
-<span class="nav-icon uil uil-folder"></span>
-<span class="menu-text">Order History</span>
-
-</a>
-
-</li>
-
-
-
-
-
-
-
-=======
   
   <li class="">
   <a href="view_category">View Category</a>
@@ -181,7 +141,7 @@ Settings</a>
 </a>
 
 </li>
->>>>>>> branch 'master' of https://github.com/SampadaS10/Final_Project
+
 </ul>
 </div>
 </div>
@@ -229,15 +189,13 @@ Export
 <span class="userDatatable-title">Product Image</span>
 </th>
 <th>
-<span class="userDatatable-title"></span>
+<span class="userDatatable-title">Operations</span>
 </th>
-<th>
-<span class="userDatatable-title"></span>
-</th>
+
 </tr>
 </thead>
  <tbody>
-<tr>
+<!-- <tr>
 <td>
 <div class="userDatatable-content">01</div>
 </td>
@@ -255,7 +213,7 @@ Export
 </div>
 </div>
 </td>
-</tr>
+</tr> -->
 
 <tr th:each="product: ${products}">
 <td>
@@ -284,8 +242,17 @@ Export
 <td>
 <div class="d-flex">
 <!-- <img th:src="'img/'+${product.getProduct_image()}"> -->
- <img th:src="@{${'/img/Jewellery/' + product.getProduct_image()}}" width="200"/> 
+ <img th:src="@{${'/img/Jewellery/' + product.getProduct_image()}}" width="150" height="150"/> 
 </div>
+</td>
+<td>
+<a href="updateproduct">
+<button class="btn btn-primary btn-default btn-rounded ">
+<span class="nav-icon uil uil-edit"></span> Update</button></a>
+
+<a th:href="@{'/deleteproduct'+${product.getProduct_id()}}">
+<button type="submit" class="btn btn-primary btn-default btn-rounded ">
+<span class="nav-icon uil uil-trash-alt"></span> Delete</button></a>
 </td>
 </tr>
 

@@ -7,13 +7,31 @@
 </head>
 <body>
 
-	
 
-		
-			
-			
-				
-				<div th:each="product: ${products}" class="modal-dialog modal-lg" >
+
+	<div th:each="product: ${products}" class="col-md-3 col-sm-6 col-xs-12">
+		<figure class="itg-hover-style1">
+			<img src="img1/all/categorie1.png" alt="">
+			<figcaption class="pad-bottom10 figure-boxx cotegories">
+				<h4 class="theme-headdings text-center"><label th:text="${product.getProduct_name()}"></label></h4>
+				<p>View the collection</p>
+				<div class="categorie-text-box">
+					<h4>
+						<a href="collection-list-sidebar.html"><label th:text="${product.getProduct_name()}"></label></a>
+					</h4>
+					<p th:text="${product.getProduct_description()}"></p>
+					<a href="collection-list-sidebar.html" class="itg-button mar-top20">View
+						Shop</a>
+				</div>
+			</figcaption>
+		</figure>
+	</div>
+
+
+
+
+
+	<!-- <div th:each="product: ${products}" class="modal-dialog modal-lg" >
                         <div class="Quick-view-popup modal-content text-left">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -32,7 +50,7 @@
                                     <div class="col-md-6 col-sm-6 col-xs-12 responsive-top">
                                         <h3 class="theme-headdings text-left pad-top10 product-detail-title"><a href="#"><label th:text="${product.getProduct_name()}"></label></a></h3>
                                         <div class="star-box-section left product-det text-left pad-top15">
-                                            <!-- <ul>
+                                            <ul>
                                                 <li>
                                                     <p>	<i class="fa fa-star"></i>
                                                         <i class="fa fa-star"></i>
@@ -43,13 +61,13 @@
                                                 </li>
                                                 <li class="border-left-site">3 Review(s)</li>
                                                 <li class="border-left-site">Add a Review</li>
-                                            </ul> -->
+                                            </ul>
                                         </div>
                                         <div class="clear"></div>
                                         <div class="per-box texy-left mar-top15">
                                             <p th:text="${product.getProduct_description()}"></p>
                                         </div>
-                                        <!-- <div class="product-detail-btn  pad-top15">
+                                        <div class="product-detail-btn  pad-top15">
                                             <div class="form-row col-sm-5 col-xs-12 country-boxs billing-box select ">
                                                 <div class="row">
                                                     <p>
@@ -80,7 +98,7 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                        </div> -->
+                                        </div>
                                         <div class="col-md-6 col-sm-7 row">
                                             <div class="order-data box order-table text-center padTB15">
                                                 <div class="order-table-cell order-text product-input-type">
@@ -96,10 +114,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
-			
-		
-	
+                </div> -->
+
+
+
 
 
 </body>

@@ -21,9 +21,14 @@ public class CategoryController
 	@Autowired
 	private CategoryRepo catrepo;
 	
+//	@GetMapping("/vendorindex")
+//	public String vendorindex() {
+//		return "vendor/index";
+//	}
+	
 	@GetMapping("/addcategory")
-	public String index() {
-		return "vendor/add_category";
+	public String addcategory() {
+		return "admin/add_category";
 	}
 	
 		

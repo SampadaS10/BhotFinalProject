@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" dir="ltr">
 
 
 <head>
@@ -14,7 +14,7 @@
 
 <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
 
-<link rel="stylesheet" href="../../../unicons.iconscout.com/release/v4.0.0/css/line.css">
+<link rel="stylesheet" href="release/v4.0.0/css/line.css">
 </head>
 <body class="layout-light side-menu">
 
@@ -111,27 +111,6 @@ Settings</a>
   </a>
   <ul>
   <li class="">
-<<<<<<< HEAD
-  <a href="products.html">Add Category</a>
-  </li>
-  <li class="">
-  <a href="product-details.html">View Category</a>
-  </li>
-  </ul>
-  </li>
-<li class="has-child">
-<a href="#" class="">
-<span class="nav-icon uil uil-envelope"></span>
-<span class="menu-text">Product</span>
-<span class="toggle-icon"></span>
-</a>
-<ul>
-<li class="">
-<a href="inbox.html">Add Product</a>
-</li>
-<li class="">
-<a href="read-email.html">View Product</a>
-=======
   <a href="addcategory">Add Category</a>
   </li>
   <li class="">
@@ -151,13 +130,12 @@ Settings</a>
 </li>
 <li class="">
 <a href="view_product">View Product</a>
->>>>>>> branch 'master' of https://github.com/SampadaS10/Final_Project
 </li>
 </ul>
 </li>
 
 <li class="has-child">
-<a href="#" class="">
+<a href="orderhistory" class="">
 <span class="nav-icon uil uil-folder"></span>
 <span class="menu-text">Order History</span>
 
@@ -176,115 +154,46 @@ Settings</a>
 </div>
 </div>
 <div class="contents">
+<div class="crm mb-25">
 <div class="container-fluid">
+<div class="row ">
+
+<div class="col-xxl-6">
 <div class="row">
-<div class="col-lg-12 mb-30">
-<div class="card mt-30">
-<div class="card-body">
-<div class="userDatatable adv-table-table global-shadow border-light-0 w-100 adv-table">
-<div class="table-responsive">
-<div class="adv-table-table__header">
-<h4>View Product</h4>
-<div class="adv-table-table__button">
-<div class="dropdown">
-<a class="btn btn-primary dropdown-toggle dm-select" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-Export
-</a>
-<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-<a class="dropdown-item" href="#">copy</a>
-<a class="dropdown-item" href="#">csv</a>
-<a class="dropdown-item" href="#">print</a>
-</div>
-</div>
-</div>
-</div>
-<div id="filter-form-container"></div>
-<table class="table mb-0 table-borderless adv-table" data-sorting="true" data-filter-container="#filter-form-container" data-paging-current="1" data-paging-position="right" data-paging-size="10">
-<thead>
-<tr class="userDatatable-header">
-<th>
-<span class="userDatatable-title">Product Id</span>
-</th>
-<th>
-<span class="userDatatable-title">Product Name</span>
-</th>
-<th>
-<span class="userDatatable-title">Price</span>
-</th>
-<th>
-<span class="userDatatable-title">Quantity</span>
-</th>
-<th>
-<span class="userDatatable-title">Product Image</span>
-</th>
-<th>
-<span class="userDatatable-title"></span>
-</th>
-<th>
-<span class="userDatatable-title"></span>
-</th>
-</tr>
-</thead>
- <tbody>
-<tr>
-<td>
-<div class="userDatatable-content">01</div>
-</td>
-<td>
-<div class="d-flex">
-<div class="userDatatable-inline-title">
-<h6>Gold</h6>
-</div>
-</div>
-</td>
-<td>
-<div class="d-flex">
-<div class="userDatatable-inline-title">
-<img src="img/svg/x2.svg">
-</div>
-</div>
-</td>
-</tr>
+<br>
+    <div class="col-lg-8">
+        <div class="card card-horizontal card-default card-md mb-4">
+        <div class="card-header">
+        <h6>Add Category</h6>
+        </div>
+        <div class="card-body py-md-30">
+        <div class="horizontal-form">
+        <form action="addcategory" method="post">
+        <div class="form-group row">
+        <div class="col-sm-3 d-flex aling-items-center">
+        <label for="inputName" class=" col-form-label color-dark fs-14 fw-500 align-center">Category Name</label>
+        </div>
+        <div class="col-sm-9">
+        <input type="text" class="form-control ih-medium ip-light radius-xs b-light px-15" id="inputName" placeholder="Enter Category Name" name="category_name">
+        </div>
+        </div>
+        <center><button class="btn btn-primary btn-default btn-squared ">Add Category
+        </button></center>
 
-<tr th:each="product: ${products}">
-<td>
-<div class="userDatatable-content" th:text="${product.getProduct_id()}"></div>
-</td>
-<td>
-<div class="d-flex">
-<div class="userDatatable-inline-title">
-<h6 th:text="${product.getProduct_name()}"></h6>
-</div>
-</div>
-</td>
-<td>
-<div class="d-flex">
-<div class="userDatatable-inline-title" th:text="${product.getPrice()}">
-</div>
-</div>
-</td>
-<td>
-<div class="d-flex">
-<div class="userDatatable-inline-title" th:text="${product.getProduct_quantity()}">
-</div>
-</div>
-</td>
+        </form>
+        </div>
+        <label for="inputName" class=" col-form-label color-dark fs-14 fw-500 align-center">Category Already Exits!!!</label>
+        </div>
+        </div>
+        
+        </div>
 
-<td>
-<div class="d-flex">
-<!-- <img th:src="'img/'+${product.getProduct_image()}"> -->
- <img th:src="@{${'/img/Jewellery/' + product.getProduct_image()}}" width="200"/> 
 </div>
-</td>
-</tr>
+</div>
 
-</tbody>
-</table>
+
 </div>
-</div>
-</div>
-</div>
-</div>
+
 </div>
 </div>
 </div>
@@ -304,9 +213,6 @@ Export
 </div>
 </footer>
 </main>
-
-
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgYKHZB_QKKLWfIRaYPCadza3nhTAbv7c"></script>
 
 <script src="js/plugins.min.js"></script>
 <script src="js/script.min.js"></script>

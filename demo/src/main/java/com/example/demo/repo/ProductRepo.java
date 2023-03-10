@@ -9,6 +9,6 @@ import com.example.demo.Entity.Product;
 
 public interface ProductRepo extends JpaRepository<Product, Integer> 
 {
-	@Query("select p from Product p where product_name='bracelet'")
-	List<Product> FindCategory();
+	@Query("select p from Product p")
+	List<Product> FindProducts();
 }

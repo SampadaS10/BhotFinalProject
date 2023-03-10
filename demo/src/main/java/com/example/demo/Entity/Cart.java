@@ -1,5 +1,6 @@
 package com.example.demo.Entity;
 
+import java.util.Date;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,20 +13,14 @@ public class Cart {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int cart_id;
 	private int user_id;
-	private int prod_id;
-	private int qty;
+	private int product_id;
+	private int quantity;
 	
 	public Cart() {
 		super();
 	}
 
-	public Cart(int cart_id, int user_id, int prod_id, int qty) {
-		super();
-		this.cart_id = cart_id;
-		this.user_id = user_id;
-		this.prod_id = prod_id;
-		this.qty = qty;
-	}
+	
 
 	public int getCart_id() {
 		return cart_id;
@@ -43,25 +38,25 @@ public class Cart {
 		this.user_id = user_id;
 	}
 
-	public int getProd_id() {
-		return prod_id;
+	public int getProduct_id() {
+		return product_id;
 	}
 
-	public void setProd_id(int prod_id) {
-		this.prod_id = prod_id;
+	public void setProduct_id(int product_id) {
+		this.product_id = product_id;
 	}
 
-	public int getQty() {
-		return qty;
+	public int getQuantity() {
+		return quantity;
 	}
 
-	public void setQty(int qty) {
-		this.qty = qty;
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 
 	@Override
 	public String toString() {
-		return "Cart [cart_id=" + cart_id + ", user_id=" + user_id + ", prod_id=" + prod_id + ", qty=" + qty + "]";
+		return "Cart [cart_id=" + cart_id + ", user_id=" + user_id + ", product_id=" + product_id + ", quantity=" + quantity + "]";
 	}
 	
 	

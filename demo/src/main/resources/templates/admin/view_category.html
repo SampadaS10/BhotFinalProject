@@ -114,6 +114,7 @@ Settings</a>
   </a>
   <ul>
   <li class="">
+<<<<<<< HEAD
   <a href="products.html">Add Category</a>
   </li>
   <li class="">
@@ -133,12 +134,37 @@ Settings</a>
 </li>
 <li class="">
 <a href="read-email.html">View Product</a>
+=======
+  <a href="addcategory">Add Category</a>
+  </li>
+  <li class="">
+  <a href="view_category">View Category</a>
+  </li>
+  </ul>
+  </li>
+<li class="has-child">
+<a href="#" class="">
+<span class="nav-icon uil uil-envelope"></span>
+<span class="menu-text">Product</span>
+<span class="toggle-icon"></span>
+</a>
+<ul>
+<li class="">
+<a href="addproduct">Add Product</a>
+</li>
+<li class="">
+<a href="view_product">View Product</a>
+>>>>>>> branch 'master' of https://github.com/SampadaS10/Final_Project
 </li>
 </ul>
 </li>
 
 <li class="has-child">
+<<<<<<< HEAD
 <a href="#" class="">
+=======
+<a href="orderhistory" class="">
+>>>>>>> branch 'master' of https://github.com/SampadaS10/Final_Project
 <span class="nav-icon uil uil-folder"></span>
 <span class="menu-text">Order History</span>
 
@@ -202,7 +228,7 @@ Settings</a>
 
 											</thead>
 											<tbody>
-												<tr>
+												<!-- <tr>
 													<td>
 														<div class="userDatatable-content">01</div>
 													</td>
@@ -226,7 +252,7 @@ Settings</a>
 														</button>
 													</td>
 
-												</tr>
+												</tr> -->
 												<tr th:each="category: ${categories}">
 													<td th:text="${category.getCategory_id()}"></td>
 													<td th:text="${category.getCategory_name()}"></td>

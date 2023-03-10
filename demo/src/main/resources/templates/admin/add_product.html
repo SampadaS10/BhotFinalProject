@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
 
 
 <head>
@@ -111,10 +111,10 @@ Settings</a>
   </a>
   <ul>
   <li class="">
-  <a href="products.html">Add Category</a>
+  <a href="addcategory">Add Category</a>
   </li>
   <li class="">
-  <a href="product-details.html">View Category</a>
+  <a href="view_category">View Category</a>
   </li>
   </ul>
   </li>
@@ -126,16 +126,16 @@ Settings</a>
 </a>
 <ul>
 <li class="">
-<a href="inbox.html">Add Product</a>
+<a href="addproduct">Add Product</a>
 </li>
 <li class="">
-<a href="read-email.html">View Product</a>
+<a href="view_product">View Product</a>
 </li>
 </ul>
 </li>
 
 <li class="has-child">
-<a href="#" class="">
+<a href="orderhistory" class="">
 <span class="nav-icon uil uil-folder"></span>
 <span class="menu-text">Order History</span>
 
@@ -169,23 +169,26 @@ Settings</a>
         <div class="card-body py-md-30">
         <div class="horizontal-form">
         <form action="addproduct" method="post">
-	        <!-- <div class="form-group row">
+	        <div class="form-group row">
 	        <div class="col-sm-3 d-flex aling-items-center">
 	        <label for="inputName" class=" col-form-label color-dark fs-14 fw-500 align-center">Category Name</label>
 	        </div>
 	        <div class="col-sm-3">
 	         
 	                <div>
-	                <select  class="form-control ">
-	                <option value="01">Gold</option>
-	                <option value="02">Silver</option>
-	                <option value="03">Platinum</option>
-	                
+	                 <select  class="form-control" name="category_id" >
+	                <option th:each="choice: ${categories}" 
+	                th:value="${choice.getCategory_id()}"
+	                th:text="${choice.getCategory_name()}" 
+	                ></option>
+	                <!-- <option value="02">Silver</option>
+	                <option value="03">Platinum</option> -->
 	                </select>
+	                </div>
 	                </div>
 	                
 	        </div>
-	        </div> -->
+	        </div> 
 	        <div class="form-group row">
 	          <div class="col-sm-3 d-flex aling-items-center">
 	          <label for="inputName" class=" col-form-label color-dark fs-14 fw-500 align-center">Product Name</label>

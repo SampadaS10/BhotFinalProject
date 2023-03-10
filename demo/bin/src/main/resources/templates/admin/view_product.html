@@ -1290,6 +1290,66 @@ Export
 <span class="userDatatable-title">Product Image</span>
 </th>
 <th>
+<<<<<<< HEAD
+<span class="userDatatable-title"></span>
+</th>
+<th>
+<span class="userDatatable-title"></span>
+</th>
+</tr>
+</thead>
+ <tbody>
+<tr>
+<td>
+<div class="userDatatable-content">01</div>
+</td>
+<td>
+<div class="d-flex">
+<div class="userDatatable-inline-title">
+<h6>Gold</h6>
+</div>
+</div>
+</td>
+<td>
+<div class="d-flex">
+<div class="userDatatable-inline-title">
+<img src="img/svg/x2.svg">
+</div>
+</div>
+</td>
+</tr>
+
+<tr th:each="product: ${products}">
+<td>
+<div class="userDatatable-content" th:text="${product.getProduct_id()}"></div>
+</td>
+<td>
+<div class="d-flex">
+<div class="userDatatable-inline-title">
+<h6 th:text="${product.getProduct_name()}"></h6>
+</div>
+</div>
+</td>
+<td>
+<div class="d-flex">
+<div class="userDatatable-inline-title" th:text="${product.getPrice()}">
+</div>
+</div>
+</td>
+<td>
+<div class="d-flex">
+<div class="userDatatable-inline-title" th:text="${product.getProduct_quantity()}">
+</div>
+</div>
+</td>
+
+<td>
+<div class="d-flex">
+<!-- <img th:src="'img/'+${product.getProduct_image()}"> -->
+ <img th:src="@{${'/img/Jewellery/' + product.getProduct_image()}}" width="200"/> 
+</div>
+</td>
+=======
 <span class="userDatatable-title">Operations</span>
 </th>
 <th>
@@ -1358,6 +1418,7 @@ Export
 <span class="nav-icon uil uil-trash-alt"></span> Delete</button></a>
 </td>
 
+>>>>>>> branch 'master' of https://github.com/SampadaS10/Final_Project
 </tr>
 
 </tbody>

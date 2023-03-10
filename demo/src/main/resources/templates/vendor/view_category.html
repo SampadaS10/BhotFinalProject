@@ -6,7 +6,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>HexaDash</title>
+
+<title>Divine Jewellery</title>
 <link
 	href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&amp;display=swap"
 	rel="stylesheet">
@@ -60,8 +61,10 @@
 								class="toggle-icon"></span>
 						</a>
 							<ul>
-								<li class=""><a href="add_product.html">Add Category</a></li>
-								<li class=""><a href="view_product.html">View Category</a>
+							<li class="">
+  <a href="addcategory">Add Category</a>
+  </li>
+								<li class=""><a href="view_category">View Category</a>
 								</li>
 							</ul></li>
 						<li class="has-child"><a href="#" class=""> <span
@@ -69,11 +72,11 @@
 								class="menu-text">Product</span> <span class="toggle-icon"></span>
 						</a>
 							<ul>
-								<li class=""><a href="add_product.html">Add Product</a></li>
-								<li class=""><a href="view_product.html">View Product</a></li>
+								<li class=""><a href="addproduct">Add Product</a></li>
+								<li class=""><a href="view_product">View Product</a></li>
 							</ul></li>
 
-						<li class="has-child"><a href="#" class=""> <span
+						<li class="has-child"><a href="orderhistory" class=""> <span
 								class="nav-icon uil uil-folder"></span> <span class="menu-text">Order
 									History</span>
 
@@ -141,9 +144,7 @@
 													<td th:text="${category.getCategory_id()}"></td>
 													<td th:text="${category.getCategory_name()}"></td>
 													<td>
-														<a href="updatecategory"><button class="btn btn-primary btn-default btn-rounded ">
-															<span class="nav-icon uil uil-edit"></span> Update
-														</button></a>
+														
 														<a th:href="@{'/deletecategory'+${category.getCategory_id()}}"><button type="submit" class="btn btn-primary btn-default btn-rounded ">
 															<span class="nav-icon uil uil-trash-alt"></span> Delete
 														</button></a>
@@ -191,5 +192,4 @@
 
 </body>
 
-<!-- Mirrored from demo.dashboardmarket.com/hexadash-html/ltr/dynamic-table.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Feb 2023 15:22:23 GMT -->
 </html>

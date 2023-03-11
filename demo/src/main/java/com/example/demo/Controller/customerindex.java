@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import com.example.demo.Entity.Product;
 import com.example.demo.repo.ProductRepo;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 //@RequestMapping("/product")
 public class customerindex {
@@ -16,14 +18,16 @@ public class customerindex {
 	private ProductRepo productrepo;
 
 	@GetMapping("/Home")
-	public String ViewProducts(Model model) {
-
+	public String ViewProducts(Model model,HttpSession session) {
+		System.out.println(session.getId());
+		System.out.println("User id "+session.getAttribute("user_id"));
 		List<Product> products = productrepo.findAll();
 		model.addAttribute("products", products);
 
 		// itr.forEach(t -> {System.out.println(t);});
 		return "customer/index";
 	}
+
 
 	
 }
@@ -119,4 +123,5 @@ public class customerindex {
 //		return "customer/all-products";
 //	}
 //}
+
 

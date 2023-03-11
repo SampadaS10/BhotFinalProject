@@ -28,6 +28,7 @@ public class ControllerEg
 		model.addAttribute("index", new TestEntity());
 		return "index";
 	}
+
 //	//@ResponseBody
 //	@PostMapping("/register")
 //	public String register(@ModelAttribute TestEntity t)
@@ -44,7 +45,16 @@ public class ControllerEg
 //		repo.deleteById(id);
 //		return "index";
 //	}
+
+	//@ResponseBody
 	
+	
+	@GetMapping("/delete")
+	public String deleteuser(@RequestParam("id") int id)
+	{
+		repo.deleteById(id);
+		return "index";
+	}
 
 	@GetMapping("/payment")
 	public String payment(Model model) {

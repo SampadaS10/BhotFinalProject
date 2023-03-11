@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+   
 <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        
+        <!--[if IE]>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+        <![endif]-->
         <meta name="keywords" content="HTML5 Template" />
         <meta name="description" content="Jewellery Shop - Multipurpose Ecommerce Responsive Html5 template" />
         <meta name="author" content="itgeeksin.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-        <title>Divine Jewellery</title>
-
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Jewellery Shop - Multipurpose Ecommerce Responsive Html5 template</title>
+        <!-- Bootstrap -->
+        <!-- Favicon -->
         <link rel="shortcut icon" href="img1/favicon.ico" type="image/x-icon">
         <link rel="icon" href="img1/favicon.ico" type="image/x-icon">
         <!-- Master Css -->
@@ -21,7 +25,7 @@
     </head>
     <body>
         <header>
-            
+            <!--//==preloader Start==//-->
             <div class="loading">
                 <div>
                     <div class="c1"></div>
@@ -31,20 +35,45 @@
                 </div>
                 <h3>Loading</h3>
             </div>
-            
-           
+            <!--//==preloader End==//-->
+            <!--//==top bar start==//-->
+            <div class="top-bar-section1">
+                <div class="col-md-12">
+                    
+                </div>
+            </div>
             <div class="top-middle-section">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="row pad-top-bottom25 head-top-sec">
-                                <div class="col-md-12 col-sm-12 col-xs-12 ">
+                                <div class="col-md-6 col-sm-6 col-xs-12 ">
                                     <figure class="logo-box">
                                         <a class="" href="index.html">
-                                        <center><img alt=""  src="img1/logo.png"></center></a>
+                                        <img alt=""  src="img1/logo.png"></a>
                                     </figure>
                                 </div>
-                               
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="select-box">
+                                        <div class="language-box2 top ">
+                                            <p><a href="#"><i class="fa fa-heart" aria-hidden="true"></i>My Wishlist</a></p>
+                                        </div>
+                                        <div class="language-box2 ">
+                                            <select>
+                                                <option value="volvo">USD</option>
+                                                <option value="saab">AUD</option>
+                                                <option value="opel">EUR</option>
+                                                <option value="audi">GBP</option>
+                                            </select>
+                                        </div>
+                                        <div class="language-box1">
+                                            <select>
+                                                <option value="volvo">ENG</option>
+                                                <option value="saab">GER</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -106,7 +135,7 @@
                                                         </div>
                                                         <div class="clear"></div>
                                                         <div class="price-button-box pad-top10 pad-bottom20 pull-right">
-                                                            <a href="cart.html" class="itg-button">View cart</a>
+                                                            <a href="customer/cartDetail" class="itg-button">View cart</a>
                                                             <a href="checkout.html" class="itg-button pull-right ">Checkout</a>
                                                         </div>
                                                     </div>
@@ -119,13 +148,76 @@
                                     </div>
                                     <!-- Navbar Collapse -->
                                     <div class="navbar-collapse collapse">
-                                        <!-- nav -->
+                                        <!-- nav -->
+                                        <ul class="nav navbar-nav">
+                                            <li>
+                                                <a href="index.html">Home</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Page</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="account.html">Account</a></li>
+                                                    <li><a href="coming-soon.html">Comming Soon</a></li>
+                                                    <li><a href="404-page.html">404 Error</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Shop</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="collection-fullwidth.html">Collection Full</a></li>
+                                                    <li><a href="collection-list-sidebar.html">Collection Sidebar</a></li>
+                                                    <li><a href="customer/cartDetail">Cart</a></li>
+                                                    <li><a href="checkout.html">Checkout</a></li>
+                                                    <li><a href="order.html">Order</a></li>
+                                                    <li><a href="product-detail.html">Product Detail</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Blog</a> 
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="blog-grid-style1.html">Blogs Style 1</a></li>
+                                                    <li><a href="blog-grid-style2.html">Blogs Style 2</a></li>
+                                                    <li><a href="blog-list-sidebar.html">Blog List With Sidebar</a></li>
+                                                    <li class="left-side">
+                                                        <a href="#">Single Blog</a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="blog-detail-sidebar.html">With Sidebar</a></li>
+                                                            <li><a href="blog-detail-no-sidebar.html">Without Sidebar</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="faq-with-sidebar.html">
+                                                Faqs 
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="contact-page.html">
+                                                Contact
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
                                     <!-- navbar-collapse -->
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-xs-9 hidden-xs">
                                     <div class="icons-section pad-top20 pull-right">
-                                        <ul>
+                                        <ul>
+                                            <li class="search-box1 hidden-xs">
+                                                <input class="search" type="search" placeholder="Search" />
+                                                <div class="icon"><a href="#" class="mini-cart-icon"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+                                            </li>
+                                            <li class="hidden-xs login-box-man">
+                                                <a href="#" class="mini-cart-icon"><i class="fa fa-user " aria-hidden="true"></i></a>
+                                                <div class="login-section">
+                                                    <ul class="pad-10">
+                                                        <li><a href="#">My Wishlist</a></li>
+                                                        <li><a href="#">Sign In</a></li>
+                                                        <li><a href="#">Create Account</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
                                             <li class="hidden-xs hover-mini-cart">
                                                 <a href="#" class="mini-cart-icon"><i class=" fa fa-shopping-cart" aria-hidden="true"></i></a>
                                                 <div class="mini-card-section">
@@ -143,14 +235,27 @@
                                                             <a href="#">x</a>
                                                         </div>
                                                     </div>
-                                                    
+                                                    <div class="mini-cart-product-box pad-top20">
+                                                        <div class="cart-img-box">
+                                                            <figure>
+                                                                <img src="img1/all/mini-cart-img1.jpg" alt="">
+                                                            </figure>
+                                                        </div>
+                                                        <div class="cart-price-box">
+                                                            <h5><a href="product-detail.html">Designer Jewellery</a></h5>
+                                                            <p>$100x1</p>
+                                                        </div>
+                                                        <div class="cancle-box">
+                                                            <a href="#">x</a>
+                                                        </div>
+                                                    </div>
                                                     <div class="price-text-sec pull-right pad-top10">
                                                         <p>Total $200
                                                         <p>
                                                     </div>
                                                     <div class="clear"></div>
                                                     <div class="price-button-box pad-top10 pad-bottom20 pull-right">
-                                                        <a href="/cartDetails" class="itg-button">View cart</a>
+                                                        <a href="customer/cartDetail" class="itg-button">View cart</a>
                                                         <a href="checkout.html" class="itg-button pull-right ">Checkout</a>
                                                     </div>
                                                 </div>
@@ -178,229 +283,175 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 pad-top100 pad-bottom100 heading-box">
-                        <h3 class="heading-breadcrumb box-z text-center">Product Detail</h3>
+                        <h3 class="heading-breadcrumb box-z text-center">Cart Detail</h3>
                         <div class="clear"></div>
-                       
+                        
                         <div class="breadcrumb-box">
                             <ul class="breadcrumb">
                                 <li>
                                     <a class="sab-heading-breadcrumb box-z" href="index.html">home</a>
                                 </li>
-                                <li class="heading-wa box-z activ">Product Detail</li>
+                                <li class="heading-wa box-z activ">Cart Detail</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="blog-griad product">
+        <div class="blog-griad order-box">
             <div class="container">
-                <div class="row pad-top80 pad-bottom80">
-                    <div class="col-md-5 col-sm-5 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-10 col-sm-10 col-xs-12 pull-right ">
-                                <figure class="product-img">
-                                    <a href="img1/all/product-detail1.jpg" class="fancybox" data-fancybox-group="group">
-                                    <img src="img1/all/product-detail1.jpg" alt="">
-                                    </a>
-                                </figure>
-                            </div>
-                            <div class="col-md-2 col-sm-2 col-xs-2 popap-open hidden-xs">
-                                <div class="row responsive-top vertical-slider-box pad-top50">
-                                    <div class="slider8">
-                                        <div class="col-md-12 col-sm-12 col-xs-12 pad-top30 popap-box slide">
-                                            <figure>
-                                                <a href="img1/all/product-detail1.jpg" class="fancybox" data-fancybox-group="group">
-                                                <img src="img1/all/product-img1.jpg" alt="">
-                                                </a>
-                                            </figure>
+                <div class="row">
+                 
+                    <div class="col-md-12 col-sm-12  col-xs-12 pad-bottom80" style="margin-top:20px">
+                        <div class="clear"></div>
+                        <div class=" hidden-xs pad-top-bottom15 order-bosx price">
+                            <div class=" row">
+                                <div class=" col-md-12 col-sm-12 col-xs-12 ">
+                                    <div class=" row ">
+                                        <div class="col-md-1 col-sm-1 col-xs-12 ">
+                                            <div class="text-c  order-data grey-bg text-center pad15"></div>
+                                        </div>                                                                                                                        <!-- <table>                                        <tr th:each="product : ${products}">                                        <td th:text="${product.getProduct_name()}"></td>                                                                                <td th:text="${product.getPrice()}"></td>                                                                               </tr>                                        </table> -->
+                                        <!-- <div class="col-md-3 col-sm-3 col-xs-12 ">
+                                            <div class="text-c  order-data grey-bg text-center pad15">
+                                                <h4>Product</h4>
+                                            </div>
                                         </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-12 pad-top30 popap-box slide">
-                                            <figure>
-                                                <a href="img1/all/product-detail1.jpg" class="fancybox" data-fancybox-group="group">
-                                                <img src="img1/all/product-img3.jpg" alt="">
-                                                </a>
-                                            </figure>
+                                        <div class="col-md-2 col-sm-2 marB30 ">
+                                            <div class="text-c  order-data grey-bg text-center pad15">
+                                                <h4>Price</h4>
+                                            </div>
                                         </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-12 pad-top30 popap-box pro-box-1 slide">
-                                            <figure>
-                                                <a href="img1/all/product-detail1.jpg" class="fancybox" data-fancybox-group="group">
-                                                <img src="img1/all/product-img2.jpg" alt="">
-                                                </a>
-                                            </figure>
+                                        <div class="col-md-2 col-sm-2 marB30">
+                                            <div class="text-c  order-data grey-bg text-center pad15">
+                                                <h4>Quantity</h4>
+                                            </div>
                                         </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-12 pad-top30 popap-box slide">
-                                            <figure>
-                                                <a href="img1/all/product-detail1.jpg" class="fancybox" data-fancybox-group="group">
-                                                <img src="img1/all/product-img1.jpg" alt="">
-                                                </a>
-                                            </figure>
+                                        <div class="col-md-2 col-sm-2 marB30">
+                                            <div class="text-c  order-data grey-bg text-center pad15">
+                                                <h4>Total</h4>
+                                            </div>
                                         </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-12 pad-top30 popap-box pro-box-1 slide">
-                                            <figure>
-                                                <a href="img1/all/product-detail1.jpg" class="fancybox" data-fancybox-group="group">
-                                                <img src="img1/all/product-img2.jpg" alt="">
-                                                </a>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12 hidden-lg hidden-md hidden-sm">
-                                <div class="vertical-slider-2 pad-top30">
-                                    <div class="slider10">
-                                        <div class="slide">
-                                            <a href="img1/all/product-detail1.jpg" class="fancybox" data-fancybox-group="group">
-                                            <img src="img1/all/product-img1.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="slide">
-                                            <a href="img1/all/product-detail1.jpg" class="fancybox" data-fancybox-group="group">
-                                            <img src="img1/all/product-img2.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="slide">
-                                            <a href="img1/all/product-detail1.jpg" class="fancybox" data-fancybox-group="group">
-                                            <img src="img1/all/product-img3.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="slide">
-                                            <a href="img1/all/product-detail1.jpg" class="fancybox" data-fancybox-group="group">
-                                            <img src="img1/all/product-img1.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="slide">
-                                            <a href="img1/all/product-detail1.jpg" class="fancybox" data-fancybox-group="group">
-                                            <img src="img1/all/product-img3.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="slide">
-                                            <a href="img1/all/product-detail1.jpg" class="fancybox" data-fancybox-group="group">
-                                            <img src="img1/all/product-img2.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="slide">
-                                            <a href="img1/all/product-detail1.jpg" class="fancybox" data-fancybox-group="group">
-                                            <img src="img1/all/product-img1.jpg" alt="">
-                                            </a>
+                                        <div class="col-md-1 col-sm-1 marB30">
+                                            <div class="text-c  order-data grey-bg text-center pad15">
+                                                <h4>Status</h4>
+                                            </div>
+                                        </div> -->
+                                        <div class="col-md-1 col-sm-1 col-xs-12 ">
+                                            <div class="text-c  order-data grey-bg text-center pad15"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-7 col-sm-7 col-xs-12 responsive-top">                    
-                        <h3 class="theme-headdings text-left pad-top10 product-detail-title"><a href="#"><label th:text="${product.getProduct_name()}"></label></a></h3>
-                      
-                        <div class="clear"></div>                        <form action="addCartData" method="post">
-                        <div class="per-box texy-left mar-top15">
-                            <p th:text="${product.getProduct_description()}"></p>                            <input type="hidden" th:value="${product.getProduct_id()}" name="product_id">							<input type="hidden" th:value="${session.user_id}" name="user_id">
-                        </div>
-                        <div class="head-medial-text pad-top10">
-                            <p>Availability: <span class="Products-in-stock" th:text="${product.getStatus()}"></span></p>
-                        </div>
-                        <div class="head-medial-text pad-top10">
-                            <p>Product Code:  <span class="Products-in-stock" th:text="${product.getProduct_id()}"></span></p>
-                        </div>
-                        
-                      
-                        <div class="col-md-5 col-sm-5 row">
-                            <div class="order-data box order-table text-center padTB15">
-                                <div class="order-table-cell order-text product-input-type">
-                                    <input type="number" value="01" class="qty" name="quantity">													
+                        <div class="product-order-table">
+                            <div class="row">
+                                <div class="col-md-12 col-md-12 col-xs-12 pad-top40">
+                                    <div class="row">
+                                        <div class="order-row padTB20">
+                                            <div class="col-md-1 col-sm-1 col-xs-1"></div>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="row" th:each="product : ${products}">
+                                                    <div class="text-c b order-data order-table padTB15 text-center">
+                                                        <div class="order-table-cell">
+                                                            <div class="col-md-4 col-sm-6 col-xs-12 col-xs-12">
+                                                                <a href="product-detail-sidebar.html"><img src="img1/all/cart-img1.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="col-md-8 col-sm-12 col-xs-12 pad-left0">
+                                                                <h4 class="product-title" th:text="${product.getProduct_name()}" style="color:black"></h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-12">
+                                                <div class="order-data order-table text-center padTB15">
+                                                    <div class="order-table-cell order-text">
+                                                        <h4>$10.50</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-12">
+                                                <div class="order-data order-table text-center padTB15">
+                                                    <div class="order-table-cell box order-text boxs">
+                                                        <input type="number" value="01" class="qty" name="qty1">													
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-12">
+                                                <div class="order-data order-table text-center padTB15">
+                                                    <div class="order-table-cell order-text">
+                                                        <h4 th:text="${product.getPrice()}"></h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-sm-1 col-xs-12">
+                                                <div class="order-data order-table text-center padTB15">
+                                                    <div class="order-table-cell order-text boxs">
+                                                        <strong class="dots-box"><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-sm-1 col-xs-1"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                                                        
                         </div>
-                        <div class="col-md-7 col-sm-5 product-box-btm-blog row">
-                            <button class="itg-button pro btn left mar-top15" type="submit">Add To Cart</button>
-                        </div>                        </form>
                     </div>
                 </div>
-              
-            </div>
-        
-                <div class="clear"></div>
-            </div>
-        </div>
-        <!--//===Start quick vive popap==//-->
-        <div class="quick-vive-popap">
-            <!--//================Quick view Start ==============//--> 
-            <div class="container">
-                <div class="modal fade" id="myModal">
-                    <div class="modal-dialog modal-lg" >
-                        <div class="Quick-view-popup modal-content text-left">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-                            <div class="col-md-12 col-xs-12 popap-open-box">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="row pad-bottom80">
+                    
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                       
+                       
+                     
+                       
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12 drop-down-box ">
+                        <div class="col-md-12 row">
+                            <h3 class="theme-headdings line-title-box">Cart Totals</h3>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="Cart-Totals-box mar-top30">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="order-data-color grey-bg text-left  order-data pad-bottom20">
                                         <div class="row">
-                                            <div class="col-xs-12 marB30">
-                                                <figure>
-                                                    <img src="img1/all/product-detail.png" alt="">
-                                                </figure>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12 responsive-top">
-                                        <h3 class="theme-headdings text-left pad-top10 product-detail-title"><a href="#">High Designer Jewellery</a></h3>
-                                       
-                                        <div class="clear"></div>
-                                        <div class="per-box texy-left mar-top15">
-                                            <p>Morbi mollis vestibulum sollicitudin. in eros a justo facilisis rutrum. Aenean id ullamcorper libero.</p>
-                                        </div>
-                                        <div class="product-detail-btn  pad-top15">
-                                            <div class="form-row col-sm-5 col-xs-12 country-boxs billing-box select ">
-                                                <div class="row">
-                                                    <p>
-                                                        <label for="billing_state">Material</label>
-                                                        <select class="billing_state2" id="billing_state" name="billing_state">
-                                                            <option value="">Select Color</option>
-                                                            <option value="AP">Red</option>
-                                                            <option value="AR">Blue</option>
-                                                            <option value="AS">Green</option>
-                                                            <option value="BR">Yellow</option>
-                                                            <option value="CT">Black</option>
-                                                        </select>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="form-row col-sm-5 country-boxs billing-box select down ">
-                                                <div class="row ">
-                                                    <p>
-                                                        <label for="billing_state">Size</label>
-                                                        <select class="billing_state" id="billing_state1" name="billing_state">
-                                                            <option value="">Select Size</option>
-                                                            <option value="AP">S</option>
-                                                            <option value="AR">L</option>
-                                                            <option value="AS">M</option>
-                                                            <option value="BR">XL</option>
-                                                            <option value="CT">XXL</option>
-                                                        </select>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-7 row">
-                                            <div class="order-data box order-table text-center padTB15">
-                                                <div class="order-table-cell order-text product-input-type">
-                                                    <input type="number" value="01" class="qty" name="qty1">													
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-7 col-sm-7 product-box-btm-blog row">
-                                            <a href="#" class="itg-button mar-top15">Add To Cart</a>
+                                            <strong class="col-md-6 col-sm-6 col-xs-6 text-left text-cart-box">Cart total</strong> <strong class="col-md-6 col-sm-6 col-xs-6 text-left text-cart-box">$55.50</strong>
+                                            <div class="clear"></div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-md-12 marB30">
+                                    <div class="order-data-color order-data grey-bg text-left pad-bottom20">
+                                        <div class="row">
+                                            <strong class="col-md-6 col-sm-6 col-xs-6 text-left text-cart-box">Shipping</strong> <strong class="col-md-6 col-sm-6 col-xs-6 text-left text-cart-box">Free Shipping</strong>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="col-md-12 marB30">
+                                    <div class=" order-data-color order-data grey-bg text-left pad15">
+                                        <div class="row">
+                                            <strong class="col-md-6 col-sm-6 col-xs-6 text-left text-cart-box">Total Order</strong> <strong class="col-md-6 col-sm-6 col-xs-6 text-left text-cart-box">$40.50</strong>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pad-top20">
+                            <div class="col-md-12">
+                                
+                                <a href="#" class="itg-button pull-center blog-box">Proceed To Checkout</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--//================Quick view End ==============//-->
         <!--//===footer-main-section Start==//-->
         <footer>
             <div class="footer-main-section">
@@ -527,9 +578,9 @@
         <script src="plugin1/acordian/js/jquery-ui.js"></script>
         <script src="plugin1/menu-menu/js/jquery.hover-dropdown-menu-addon.js"></script>
         <script src="plugin1/switcher/js/switcher.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
+       
         <script src="js1/main.js"></script>
     </body>
 
-<!-- Mirrored from preview.itgeeksin.com/jewellery-shop/product-detail.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Feb 2023 15:15:24 GMT -->
+
 </html>

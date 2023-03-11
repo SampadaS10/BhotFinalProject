@@ -29,14 +29,7 @@ public class ControllerEg
 		return "index";
 	}
 	//@ResponseBody
-	@PostMapping("/register")
-	public String register(@ModelAttribute TestEntity t)
-	{
-		TestEntity newte=repo.save(t);
-		System.out.println("post...");
-		System.out.println(newte);
-		return "welcome";
-	}
+	
 	
 	@GetMapping("/delete")
 	public String deleteuser(@RequestParam("id") int id)

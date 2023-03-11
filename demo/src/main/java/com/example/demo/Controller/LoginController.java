@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.example.demo.Entity.User;
 import com.example.demo.repo.UserRepo;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 public class LoginController {
 
@@ -21,12 +23,16 @@ public class LoginController {
 		}
 		
 		@PostMapping("/validate")
-		public String validateUser(@ModelAttribute ("user") User user) {
+		public String validateUser(@ModelAttribute ("user") User user,HttpSession session) {
 			System.out.println(user.getEmail()+" "+user.getPassword());
 			User foundUser=userRepo.findByEmail(user.getEmail());
 			if(foundUser!=null) {
 				if(foundUser.getPassword().equals(user.getPassword())) {
-					return "redirect:/all-products";
+					session.setAttribute("session_id",session.getId());
+					System.out.println(session.getId());
+					session.setAttribute("user_id", foundUser.getId());
+					System.out.println("Userid "+foundUser.getId());
+					return "redirect:/Home";
 				}else {
 					return "redirect:/login";
 				}

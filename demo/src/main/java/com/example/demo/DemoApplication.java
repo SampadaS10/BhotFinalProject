@@ -6,8 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
-import com.example.demo.Controller.ControllerEg;
-
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.example.demo"})
 public class DemoApplication 

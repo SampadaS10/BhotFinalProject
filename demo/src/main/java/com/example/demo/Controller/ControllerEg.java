@@ -28,22 +28,22 @@ public class ControllerEg
 		model.addAttribute("index", new TestEntity());
 		return "index";
 	}
-	//@ResponseBody
-	@PostMapping("/register")
-	public String register(@ModelAttribute TestEntity t)
-	{
-		TestEntity newte=repo.save(t);
-		System.out.println("post...");
-		System.out.println(newte);
-		return "welcome";
-	}
-	
-	@GetMapping("/delete")
-	public String deleteuser(@RequestParam("id") int id)
-	{
-		repo.deleteById(id);
-		return "index";
-	}
+//	//@ResponseBody
+//	@PostMapping("/register")
+//	public String register(@ModelAttribute TestEntity t)
+//	{
+//		TestEntity newte=repo.save(t);
+//		System.out.println("post...");
+//		System.out.println(newte);
+//		return "welcome";
+//	}
+//	
+//	@GetMapping("/delete")
+//	public String deleteuser(@RequestParam("id") int id)
+//	{
+//		repo.deleteById(id);
+//		return "index";
+//	}
 	
 
 	@GetMapping("/payment")
@@ -53,12 +53,12 @@ public class ControllerEg
 		return "customer/payment";
 	}
 
-	@GetMapping("/sendMail/?email={email}")
-	public String sendMail(@RequestParam("email")String email) {
-		System.out.println(email);
-		service.sendEmail(email);
-		return "redirect:/MailCheck";
-	}
+//	@GetMapping("/sendMail/?email={email}")
+//	public String sendMail(@RequestParam("email")String email) {
+//		System.out.println(email);
+//		service.sendEmail(email);
+//		return "redirect:/MailCheck";
+//	}
 	
 
 

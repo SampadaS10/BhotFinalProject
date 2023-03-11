@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 package com.example.demo.Controller;
 
 import java.util.List;
@@ -26,10 +26,10 @@ public class customerindex {
 	}
 
 	
-	}
+}
 
 
-=======
+
 //package com.example.demo.Controller;
 //
 //import java.util.List;
@@ -119,4 +119,4 @@ public class customerindex {
 //		return "customer/all-products";
 //	}
 //}
->>>>>>> branch 'master' of https://github.com/SampadaS10/BhotFinalProject
+
